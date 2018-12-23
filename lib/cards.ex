@@ -8,7 +8,8 @@ defmodule Cards do
       Returns a list of strings representing a deck of playing cards
     """
     def create_deck do
-    values = ["Ace", "Two", "Three", "Four", "Five"]
+    values = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven",
+    "Eight", "Nine", "Ten"]
     suits = ["Spades", "Hearts", "Clubs", "Diamonds"]
 
     for value <- values, suit <- suits do
@@ -72,6 +73,7 @@ defmodule Cards do
   @doc """
     Shorthand for creating a deck, shuffling it and deal
     with a specified `hand_size`
+
   """
   def create_hand(hand_size) do
     Cards.create_deck
